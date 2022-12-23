@@ -5,7 +5,7 @@ const share = mf.share;
 const dotenv = require('dotenv');
 const webpack = require('webpack')
 
-const env = dotenv.config().parsed
+const env = dotenv.config({ path:  path.join(__dirname, '../','../', '.env' )}).parsed
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
